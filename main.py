@@ -30,3 +30,22 @@ some_list1 = [2, 3, 4, 5, 6]
 some_list2 = [2, 3, 5, 6]
 print(find_elem_mult(some_list1))
 print(find_elem_mult(some_list2))
+
+# task_3
+from math import modf
+
+
+def find_diff(a):
+    max_elem = modf(a[0])[0]
+    min_elem = modf(a[0])[0]
+    for elem in a:
+        if modf(elem)[0] > max_elem:
+            max_elem = modf(elem)[0]
+        elif modf(elem)[0] < min_elem:
+            min_elem = modf(elem)[0]
+    return round((max_elem - min_elem), 2)
+
+
+some_list = [1.1, 1.2, 3.1, 5, 10.01]
+print(find_diff(some_list))
+

@@ -49,3 +49,13 @@ def find_diff(a):
 some_list = [1.1, 1.2, 3.1, 5, 10.01]
 print(find_diff(some_list))
 
+# task_4
+n = int(input('Введите число для переобразования в двоичную систему: '))
+
+b = ''
+
+while n > 0:
+    b = str(n % 2) + b
+    n = n // 2
+
+print(b)
